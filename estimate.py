@@ -1,6 +1,13 @@
 import math
 import unittest
 
+def wallis(n):
+    p=1
+    for i in range(1,n+1):
+        p=p*((4*i**2)/((4*i**2)-1))
+    return(p*2)
+    
+
 class TestWallis(unittest.TestCase):
     def test_low_iters(self):
         for i in range(0, 5):
